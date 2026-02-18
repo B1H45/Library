@@ -1,3 +1,52 @@
 * {
     color: red;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.title {
+    font-size: clamp(1rem, calc(100vw / 4), 10rem);;
+    font-family: monospace;
+}
+
+.center-align {
+    display: flex;
+    justify-content: center;
+}
+
+.section {
+    margin: 2rem;
+}
+
+.card-gallery {
+    display: grid;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 70vw), 1fr));
+    max-width: 100rem;
+}
+
+.card-gallery li.card {
+    outline: 0.1rem solid red;
+    border-radius: 1rem;
+    padding: 3rem;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.dialogue-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+}
+
+.dialogue-box::backdrop {
+    background-color: red;
+    opacity: 0.3;
 }

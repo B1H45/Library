@@ -8,9 +8,40 @@
 
 </head>
 <body>
-    <h1>Books Ahoy</h1>
+    <header class="section center-align">
+        <h1 class="title">Books</h1>
+    </header>
 
-    <ul id="book-table"></ul>
+    <section class="section center-align">
+        <button command="show-modal" commandfor="add-book-dialog">Add Book</button>
+
+        <dialog id="add-book-dialog" class="dialogue-box" closedby="any">
+            <h2>HELLO ENTER A BOOK</h2>
+            <form id="add-book-form" method="dialog" autocomplete="off">
+                <label>
+                    Title
+                    <input type="text" name="title" required autofocus>
+                </label>
+                
+                <label>
+                    Author
+                    <input type="text" required name="author">
+                </label>
+
+                <label>
+                    Page Count
+                    <input type="number" required name="pgCount" min="10">                
+                </label>
+
+                <button value="add">Add</button>
+                <button value="cancel" formnovalidate>Cancel</button>
+            </form>
+        </dialog>
+    </section>
+
+    <section class="section center-align">
+        <ul id="book-table" class="card-gallery"></ul>
+    </section>
     
     <script src="script.js"></script>
 </body>
