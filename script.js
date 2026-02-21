@@ -87,6 +87,9 @@ function displayBooks(myLibrary) {
         readToggle.addEventListener("click", ()=>{
           book.toggleRead(readToggle);
         })
+        readToggle.addEventListener("mouseleave", ()=>{
+          readToggle.blur();
+        })
 
         buttonDiv.appendChild(remButton);
         buttonDiv.appendChild(readToggle);
